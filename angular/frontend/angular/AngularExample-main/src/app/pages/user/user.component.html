@@ -1,0 +1,17 @@
+
+<div class="container-fluid"> 
+  <input  type="text" class = "form-control-mb-3"  [(ngModel)] = filterText placeholder="Search..">
+  <br>
+  <small class="text-muted" *ngIf="filterText">Aradığınız İsim: {{filterText}}</small> 
+</div>
+<div class = "mb-3" style="display: flex;" >
+  <!-- <div *ngIf="item.id==1">first Element </div> {{item.name}} -->
+  <app-custom-table [data]="userList" [columns]="userColumns" buttontext="Sil"  (buttonFunction)="DeleteUser($event)" (buttonFunction)="UpdateUser($event)">
+
+  </app-custom-table>
+  
+  
+</div>
+
+
+

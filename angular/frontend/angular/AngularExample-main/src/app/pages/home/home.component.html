@@ -1,0 +1,11 @@
+<div style="padding: 1rem;width: 50%;">
+  <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <label>Ad:</label>
+    <input type="text" formControlName="firstName" class="form-control">
+    <label>Soyad:</label>
+    <input type="text" formControlName="lastName" class="form-control">
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="!userForm.valid">Gönder</button>
+    <!-- <input type="text" class="form-control" [(ngModel)]="inputEx"  (input)="changefunction($event)"> -->
+    <!-- <div [style.backgroundColor]="color">{{inputEx}}</div> -->
+  </form>
+</div>

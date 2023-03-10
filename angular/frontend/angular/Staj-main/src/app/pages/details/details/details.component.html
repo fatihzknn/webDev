@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home
+        <span class="visually-hidden">(current)</span>
+      </a>
+  </ul>
+</nav>
+
+<div class="container mt-3 text-center" *ngIf="load else loaded">
+  Loading ...
+</div>
+<ng-template #loaded>
+  <table>
+    <tr>
+  <td>
+    <img  class="img-thumbnail" src="https://picsum.photos/500">
+  </td>
+  <td style="height: 100px;">
+    <app-custom-table [data] = "postList" [columns] = "postColumns">
+    </app-custom-table>
+  </td>
+  </tr>
+  </table>
+</ng-template>
